@@ -1,0 +1,11 @@
+{
+    "name": "aranda/libreria",
+    "description": "Componente modular de integracion arnda y CA",
+    "autoload": {
+        "psr-4": {
+            "Aranda\\Lib\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
