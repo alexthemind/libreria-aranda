@@ -65,7 +65,7 @@ class createRfcRequestHandler implements ArandaCaRequestHandleInterface {
     
     public function formatResponse($data)
     { 
-        $idTicket = (object) ['idRfc' => $data->id];
+        $idTicket = (object) ['idrfc' => $data->id];
 
         return (object) [
             'codError'       => '',

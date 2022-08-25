@@ -36,7 +36,7 @@ class ServiceDeskFactory extends ArandaCaFactory
         'wsStatusTask' => wsStatusTaskRequestHandler::class,
         'createTaskRfc' => createTaskRfcRequestHandler::class,
         'CreateRfc' => createRfcRequestHandler::class,
-        'addCIByChangeOrderGeneric' => addCIByChangeOrderGenericRequestHandler::class,
+        'AddCIByChangeOrderGeneric' => addCIByChangeOrderGenericRequestHandler::class,
         'deleteCIChangeOrder' => deleteCIChangeOrderRequestHandler::class,
         'UpdateFieldRfc' => updateFieldRfcRequestHandler::class,
         'getListTaskByRfcAndTaskId' => getListTaskByRfcAndTaskIdRequestHandler::class,

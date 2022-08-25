@@ -142,7 +142,7 @@ class Client {
 
     public function addRelation($id, $data)
     {
-        $url = $this->uri . "/api/v9/item/$id/relation";
+        $url = $this->uri . "/item/$id/relation";
 
         $request = new Request('POST', $url, $this->headers, json_encode($data));
         return $this->makeRequest($request);

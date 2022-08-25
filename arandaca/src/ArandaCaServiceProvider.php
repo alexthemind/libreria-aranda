@@ -25,19 +25,19 @@ class ArandaCaServiceProvider extends ServiceProvider
         $this->app->singleton('aranda', function() { 
             $httpClient = new \GuzzleHttp\Client();
             $aranda = new Client(config('arandaca.aranda.uri'), $httpClient);
-            $cache = new CacheManager(app());
+            // $cache = new CacheManager(app());
 
-            if (! $cache->get('arandaToken')) {
+            // if (! $cache->get('arandaToken')) {
                 $aranda->auth([
                     'userName' => config('arandaca.aranda.username'),
                     'password' => config('arandaca.aranda.password'),
                     'consoleType' => 1,
                     'providerId' => 0
                 ]);
-                $cache->put('arandaToken', $aranda->getToken(), 1);                
-            } else {
-                $aranda->setToken($cache->get('arandaToken'));
-            }
+            //     $cache->put('arandaToken', $aranda->getToken(), 1);                
+            // } else {
+            //     $aranda->setToken($cache->get('arandaToken'));
+            // }
             return $aranda;    
         });        
     }

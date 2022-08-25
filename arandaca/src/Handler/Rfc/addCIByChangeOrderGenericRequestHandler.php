@@ -27,7 +27,7 @@ class addCIByChangeOrderGenericRequestHandler implements ArandaCaRequestHandleIn
     {        
         $data = $this->formatData();
         
-        $res = $this->aranda->addRelation($data['id'], $data);
+        $res = $this->aranda->addRelation($data["id"], $data); 
 
         if ($res['code'] >= 400) {
             return ['codError' => 'La consulta no pudo ser procesada con éxito!'];
@@ -38,7 +38,7 @@ class addCIByChangeOrderGenericRequestHandler implements ArandaCaRequestHandleIn
     
     public function formatData()
     {
-        $field = $this->args[0]['idci'];
+        $field = $this->args[0]['idci'][0];
         $arr   = explode(':', $field);
         $ciId  = $arr[1];
 
@@ -48,9 +48,10 @@ class addCIByChangeOrderGenericRequestHandler implements ArandaCaRequestHandleIn
             "id"=> $id,
             "isSolution"=> false,
             "itemType"=> config('arandaca.aranda.item_type'),
+            "itemType"=> 4,
             "relatedItemId"=> $ciId,
             "relatedItemType"=> "CI",
-            "relationTypeId"=> 124,
+            "relationTypeId"=> 1,
             "typeIsReverse"=> true
         ];
     }
