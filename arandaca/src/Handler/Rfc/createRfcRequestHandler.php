@@ -1,6 +1,6 @@
 <?php
 
-namespace ArandaCa\Handler;
+namespace ArandaCa\Handler\Rfc;
 
 use ArandaCa\Aranda\Client;
 use ArandaCa\Facade\ArandaCaFacade;
@@ -51,6 +51,7 @@ class createRfcRequestHandler implements ArandaCaRequestHandleInterface {
             "categoryId" => self::$categoryId,
             "consoleType" => self::$consoleType,
             "description" => $data['description'],
+            "subject" => $data['summary'],
             "itemType" => config('arandaca.aranda.item_type'),
             "itemVersion" => self::$itemVersion,
             "modelId" => config('arandaca.aranda.model.id'),

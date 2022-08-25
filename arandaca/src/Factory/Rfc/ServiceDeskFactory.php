@@ -3,7 +3,7 @@
 namespace ArandaCa\Factory\Rfc;
 
 use ArandaCa\Factory\ArandaCaFactory;
-use ArandaCa\Handler\createRfcRequestHandler;
+use ArandaCa\Handler\Rfc\createRfcRequestHandler;
 use ArandaCa\Handler\Rfc\checkStatusRequestHandler;
 use ArandaCa\Handler\Rfc\closeTicketRequestHandler;
 use ArandaCa\Handler\Rfc\getListGroupRequestHandler;
@@ -35,7 +35,7 @@ class ServiceDeskFactory extends ArandaCaFactory
         'getListAgentGroup' => getListAgentGroupRequestHandler::class,
         'wsStatusTask' => wsStatusTaskRequestHandler::class,
         'createTaskRfc' => createTaskRfcRequestHandler::class,
-        'createRfc' => createRfcRequestHandler::class,
+        'CreateRfc' => createRfcRequestHandler::class,
         'addCIByChangeOrderGeneric' => addCIByChangeOrderGenericRequestHandler::class,
         'deleteCIChangeOrder' => deleteCIChangeOrderRequestHandler::class,
         'UpdateFieldRfc' => updateFieldRfcRequestHandler::class,
