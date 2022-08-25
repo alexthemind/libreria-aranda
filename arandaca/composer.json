@@ -1,0 +1,17 @@
+{
+    "name": "arandaca/arandaca",
+    "autoload": {
+        "psr-4": {
+            "Arandaca\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jose chirino",
+            "email": "josechirinocarpio@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "6.5.8"
+    }
+}
